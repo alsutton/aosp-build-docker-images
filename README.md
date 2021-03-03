@@ -64,6 +64,16 @@ Once the container is running you should do all your work (checkout, build, etc.
 `/aosp`. If you do anything outside of `/aosp` you risk losing if your docker container
 is destroyed, or the image is updated.
 
+## Improving performance on Linux
+
+If you're using these images on Linux you can make use of [tmpfs](https://www.kernel.org/doc/html/latest/filesystems/tmpfs.html) 
+to improve the build performance by adding `--mount type=tmpfs,destination=/app` into your docker run command line.
+For the sustanable approach this would give you the following command line;
+
+```shell
+docker run -i -t --mount source=aosp-build,target=/aosp --mount type=tmpfs,destination=/tmp {your_image_tag}
+```
+
 ## Checkout and Build
 
 For instructions on how to check-out and build the AOSP please see the 
