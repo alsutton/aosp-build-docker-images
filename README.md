@@ -1,8 +1,8 @@
 # aosp-build-docker-images
 
 These are updated versions of the [AOSP Docker files](https://cs.android.com/android/platform/superproject/+/master:build/make/tools/docker/)
-which support more modern Linux distributions and are based on [the Ubuntu update patch I
-created when I was working at Google](https://android-review.googlesource.com/c/platform/build/+/1161367).
+which support more modern Linux distribution versions. There's a lot of repetition between them because the 
+differences are mainly in the base image and package installation phases.
 
 **Please Note:** Building the AOSP inside docker is convenient, but slow. If possible you should use a bare metal
 installation of a Linux distribution to get the best performance.
