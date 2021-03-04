@@ -86,3 +86,9 @@ For instructions on how to check-out and build the AOSP please see the
 [download](https://source.android.com/setup/build/downloading) and
 [build](https://source.android.com/setup/build/building) sections of
 the AOSP documentation from Google.
+
+## Supporting other Linux distributions
+
+If you have a Dockerfile for another recent distribution please feel free to
+create a pull request. I only use Debian these days, so my ability to create 
+other images from scratch is limited.
