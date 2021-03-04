@@ -66,7 +66,7 @@ is destroyed, or the image is updated.
 
 ## Improving performance on Linux
 
-**WARNING:** This uses your RAM as for temporary storage instead of using the disk, if you
+**WARNING:** This uses your RAM for temporary storage instead of using the disk, if you
 don't have enough RAM to support this you'll see strange errors (e.g. unsatisfied link errors,
 out of memory errors). If you see this when using this tweak try building without it, or reduce
 the number of parallel builds running (i.e. reduce the `-j` value).
