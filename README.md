@@ -73,7 +73,7 @@ the number of parallel builds running (i.e. reduce the `-j` value).
 
 
 If you're using these images on Linux you can make use of [tmpfs](https://www.kernel.org/doc/html/latest/filesystems/tmpfs.html) 
-to improve the build performance by adding `--mount type=tmpfs,destination=/app` into your docker run command line.
+to improve the build performance by adding `--mount type=tmpfs,destination=/tmp` into your docker run command line.
 For the sustanable approach this would give you the following command line;
 
 ```shell
