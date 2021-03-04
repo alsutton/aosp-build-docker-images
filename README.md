@@ -66,6 +66,12 @@ is destroyed, or the image is updated.
 
 ## Improving performance on Linux
 
+**WARNING:** This uses your RAM as for temporary storage instead of using the disk, if you
+don't have enough RAM to support this you'll see strange errors (e.g. unsatisfied link errors,
+out of memory errors). If you see this when using this tweak try building without it, or reduce
+the number of parallel builds running (i.e. reduce the `-j` value).
+
+
 If you're using these images on Linux you can make use of [tmpfs](https://www.kernel.org/doc/html/latest/filesystems/tmpfs.html) 
 to improve the build performance by adding `--mount type=tmpfs,destination=/app` into your docker run command line.
 For the sustanable approach this would give you the following command line;
