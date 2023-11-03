@@ -24,7 +24,7 @@ RUN DEBIAN_FRONTEND="noninteractive" apt-get install -y git-core gnupg flex biso
 RUN mkdir ~/.gnupg && chmod 600 ~/.gnupg && echo "disable-ipv6" >> ~/.gnupg/dirmngr.conf
 
 # Download and verify repo
-RUN gpg --keyserver pool.sks-keyservers.net --recv-key 8BB9AD793E8E6153AF0F9A4416530D5E920F5C65
+RUN gpg --recv-key 8BB9AD793E8E6153AF0F9A4416530D5E920F5C65
 RUN curl -o /usr/local/bin/repo https://storage.googleapis.com/git-repo-downloads/repo
 RUN curl https://storage.googleapis.com/git-repo-downloads/repo.asc | gpg --verify - /usr/local/bin/repo
 RUN chmod a+x /usr/local/bin/repo
